@@ -191,7 +191,7 @@ async def root():
     return {"message": "Chennai Photobooth Studio API"}
 
 @api_router.post("/bookings", response_model=BookingInquiry)
-async def create_booking(input: BookingInquiryCreate):
+async def create_booking(input: BookingInquiryCreate, background_tasks: BackgroundTasks):
     booking_dict = input.model_dump()
     booking_obj = BookingInquiry(**booking_dict)
     
@@ -199,6 +199,10 @@ async def create_booking(input: BookingInquiryCreate):
     doc['timestamp'] = doc['timestamp'].isoformat()
     
     await db.bookings.insert_one(doc)
+    
+    # Send email notification in background
+    background_tasks.add_task(send_booking_email, booking_obj)
+    
     return booking_obj
 
 @api_router.get("/bookings", response_model=List[BookingInquiry])
