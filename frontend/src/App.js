@@ -814,7 +814,7 @@ function App() {
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-4 gap-12">
             <div>
-              <h3 className="font-display text-2xl font-bold mb-4">Chennai Photobooths</h3>
+              <h3 className="font-futura text-2xl font-bold mb-4 tracking-wide">MEMORABOOTH</h3>
               <p className="text-gray-400">Creating unforgettable memories across Chennai</p>
             </div>
             <div>
