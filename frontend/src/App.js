@@ -317,9 +317,6 @@ function App() {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-yellow-900/80 via-yellow-900/20 to-transparent"></div>
-                  <div className="absolute top-4 right-4 bg-yellow-600 text-white px-4 py-2 rounded-full font-bold">
-                    ₹249
-                  </div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                     <h3 className="font-display text-3xl font-bold mb-2">Butterscotch Photobooth</h3>
                     <p className="text-yellow-100">Premium moments, perfect lighting</p>
@@ -347,19 +344,10 @@ function App() {
                       <span className="font-semibold">Grand Square Mall, Velachery</span>
                     </div>
                   </div>
-                  <div className="bg-yellow-50 p-4 rounded-xl mb-6 border-2 border-yellow-200">
-                    <p className="text-center">
-                      <span className="font-bold text-2xl text-yellow-700">₹249</span>
-                      <span className="text-gray-600"> for two strips</span>
-                    </p>
+                  <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 p-6 rounded-xl border-2 border-yellow-300 text-center">
+                    <p className="text-gray-600 text-sm mb-1">Starting at</p>
+                    <p className="font-bold text-3xl text-yellow-700">₹249</p>
                   </div>
-                  <Button 
-                    onClick={() => openBookingForm('Butterscotch Photobooth', '', 'Grand Square Mall, Velachery')} 
-                    className="w-full bg-gradient-to-r from-yellow-600 to-yellow-700 hover:from-yellow-700 hover:to-yellow-800 text-white py-6 text-lg rounded-full"
-                    data-testid="butterscotch-book-btn"
-                  >
-                    Book Butterscotch Booth
-                  </Button>
                 </CardContent>
               </Card>
             </div>
