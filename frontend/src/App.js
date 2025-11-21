@@ -609,33 +609,22 @@ function App() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <div className="space-y-6">
-                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
-                  <Award className="w-10 h-10 text-purple-600 mb-3" />
-                  <h3 className="font-display text-2xl font-bold text-gray-900 mb-2">Custom Branding</h3>
-                  <p className="text-gray-700">Complete booth wrapping with your brand colors, logos, and messaging</p>
-                </div>
-                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
-                  <Sparkles className="w-10 h-10 text-pink-600 mb-3" />
-                  <h3 className="font-display text-2xl font-bold text-gray-900 mb-2">Digital Integration</h3>
-                  <p className="text-gray-700">Branded digital overlays, instant social sharing, and QR code galleries</p>
-                </div>
-                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
-                  <Users className="w-10 h-10 text-blue-600 mb-3" />
-                  <h3 className="font-display text-2xl font-bold text-gray-900 mb-2">Event Support</h3>
-                  <p className="text-gray-700">Dedicated team for setup, operation, and real-time support throughout your event</p>
-                </div>
+          <div className="mb-16">
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
+                <Award className="w-10 h-10 text-purple-600 mb-3" />
+                <h3 className="font-display text-2xl font-bold text-gray-900 mb-2">Custom Branding</h3>
+                <p className="text-gray-700">Complete booth wrapping with your brand colors, logos, and messaging</p>
               </div>
-            </div>
-            <div className="relative">
-              <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1705237553502-a2ad4905bda2?crop=entropy&cs=srgb&fm=jpg&q=85" 
-                  alt="Brand activation"
-                  className="w-full h-full object-cover"
-                />
+              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
+                <Sparkles className="w-10 h-10 text-pink-600 mb-3" />
+                <h3 className="font-display text-2xl font-bold text-gray-900 mb-2">Digital Integration</h3>
+                <p className="text-gray-700">Branded digital overlays, instant social sharing, and QR code galleries</p>
+              </div>
+              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
+                <Users className="w-10 h-10 text-blue-600 mb-3" />
+                <h3 className="font-display text-2xl font-bold text-gray-900 mb-2">Event Support</h3>
+                <p className="text-gray-700">Dedicated team for setup, operation, and real-time support throughout your event</p>
               </div>
             </div>
           </div>
