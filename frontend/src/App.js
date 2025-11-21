@@ -598,7 +598,7 @@ function App() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <div className="space-y-6">
                 <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
@@ -626,6 +626,51 @@ function App() {
                   className="w-full h-full object-cover"
                 />
               </div>
+            </div>
+          </div>
+
+          {/* Brand Activation Testimonials */}
+          <div className="mb-12">
+            <h3 className="font-display text-3xl font-bold text-gray-900 mb-8 text-center">What Brands Say</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <Card className="bg-white/90 backdrop-blur-sm border-none shadow-lg" data-testid="brand-testimonial-1">
+                <CardContent className="p-6">
+                  <div className="text-purple-600 text-3xl mb-3">"</div>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    The photobooth at our product launch was a huge hit! Custom branding was spot-on, and guests loved sharing photos instantly on social media.
+                  </p>
+                  <div className="border-t pt-4">
+                    <p className="font-bold text-gray-900">Priya Mehta</p>
+                    <p className="text-sm text-gray-600">Marketing Head, Tech Startup</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white/90 backdrop-blur-sm border-none shadow-lg" data-testid="brand-testimonial-2">
+                <CardContent className="p-6">
+                  <div className="text-pink-600 text-3xl mb-3">"</div>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Professional team and seamless execution. Our corporate event engagement tripled with the photobooth activation. Highly recommend for brand events!
+                  </p>
+                  <div className="border-t pt-4">
+                    <p className="font-bold text-gray-900">Rajesh Kumar</p>
+                    <p className="text-sm text-gray-600">Event Manager, Fortune 500 Company</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white/90 backdrop-blur-sm border-none shadow-lg" data-testid="brand-testimonial-3">
+                <CardContent className="p-6">
+                  <div className="text-blue-600 text-3xl mb-3">"</div>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    From custom booth wrapping to digital galleries, everything was perfect. Best ROI we've had for any experiential marketing campaign.
+                  </p>
+                  <div className="border-t pt-4">
+                    <p className="font-bold text-gray-900">Ananya Sharma</p>
+                    <p className="text-sm text-gray-600">Brand Director, Fashion Label</p>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
 
