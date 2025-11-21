@@ -170,7 +170,7 @@ function App() {
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 mb-6 leading-tight">
             Chennai's Leading Photobooth Experience
           </h1>
-          <p className="text-xl md:text-2xl text-gray-700 mb-8 font-light max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-700 mb-8 font-light max-w-4xl mx-auto leading-relaxed">
             Experience an exquisite blend of elegance, where cherished memories intertwine with cherished keepsakes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
