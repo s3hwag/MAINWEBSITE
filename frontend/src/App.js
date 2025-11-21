@@ -363,6 +363,17 @@ function App() {
               </p>
             </div>
 
+            {/* Vanilla Image */}
+            <div className="mb-12">
+              <div className="aspect-video rounded-3xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1698235301688-6b5b79dac3d5?crop=entropy&cs=srgb&fm=jpg&q=85" 
+                  alt="Vanilla Photobooths"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
             {/* Vanilla Ideal For */}
             <Card className="mb-12 border-none shadow-xl bg-white/80 backdrop-blur-sm">
               <CardContent className="p-8">
