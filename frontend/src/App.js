@@ -757,7 +757,7 @@ function App() {
                   </div>
                   <div>
                     <p className="font-bold text-gray-900">Phone</p>
-                    <p className="text-gray-600">+91 98765 43210</p>
+                    <p className="text-gray-600">+91 7550154640</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -766,7 +766,7 @@ function App() {
                   </div>
                   <div>
                     <p className="font-bold text-gray-900">Email</p>
-                    <p className="text-gray-600">hello@chennaibooths.com</p>
+                    <p className="text-gray-600">admin@memorabooth.com</p>
                   </div>
                 </div>
               </div>
