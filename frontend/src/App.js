@@ -977,42 +977,6 @@ function App() {
                 </div>
                 
                 <div>
-                  <Label htmlFor="booth_type">Booth Type *</Label>
-                  <select 
-                    id="booth_type"
-                    required
-                    value={bookingData.booth_type}
-                    onChange={(e) => setBookingData({...bookingData, booth_type: e.target.value})}
-                    className="mt-2 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
-                    data-testid="booking-booth-type-select"
-                  >
-                    <option value="">Select Booth Type</option>
-                    <option value="Brownie Photobooth">Brownie Photobooth (₹199)</option>
-                    <option value="Butterscotch Photobooth">Butterscotch Photobooth (₹249)</option>
-                    <option value="Vanilla Photobooths">Vanilla Photobooths (Event)</option>
-                  </select>
-                </div>
-                
-                {bookingData.booth_type === "Vanilla Photobooths" && (
-                  <div>
-                    <Label htmlFor="package_type">Package Type *</Label>
-                    <select 
-                      id="package_type"
-                      required
-                      value={bookingData.package_type}
-                      onChange={(e) => setBookingData({...bookingData, package_type: e.target.value})}
-                      className="mt-2 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
-                      data-testid="booking-package-type-select"
-                    >
-                      <option value="">Select Package</option>
-                      <option value="Classic Package (3 Hours)">Classic Package (3 Hours) - ₹30,000</option>
-                      <option value="Deluxe Package (5 Hours)">Deluxe Package (5 Hours) - ₹40,000</option>
-                      <option value="Premium Package (Full Day)">Premium Package (Full Day) - ₹60,000</option>
-                    </select>
-                  </div>
-                )}
-                
-                <div>
                   <Label htmlFor="message">Additional Details</Label>
                   <Textarea 
                     id="message"
