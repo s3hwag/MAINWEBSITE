@@ -31,6 +31,12 @@ body {
   font-family: 'Allura', cursive;
 }
 
+.font-futura {
+  font-family: 'Futura', 'Futura Medium', 'Century Gothic', 'Apple Gothic', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
 button {
   font-weight: 500;
   letter-spacing: 0.3px;
