@@ -122,8 +122,8 @@ function App() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-display font-bold tracking-tight text-gray-900">
-              Chennai Photobooths
+            <div className="text-2xl font-futura font-bold tracking-wide text-gray-900">
+              MEMORABOOTH
             </div>
             <div className="hidden lg:flex items-center gap-8">
               {[
