@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Allura&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Allura&family=Inter:wght@300;400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -17,20 +17,16 @@ body {
 }
 
 .font-display {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
 }
 
 .font-script {
   font-family: 'Allura', cursive;
 }
 
-.cream-50 {
-  background-color: #fefaf6;
-}
-
 button {
   font-weight: 500;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
 }
 
 .App {
@@ -54,6 +50,15 @@ html {
   }
 }
 
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
 .animate-fadeInUp {
   animation: fadeInUp 0.8s ease-out forwards;
 }
@@ -73,10 +78,25 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #e11d48;
+  background: linear-gradient(to bottom, #ec4899, #a855f7);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #be123c;
+  background: linear-gradient(to bottom, #db2777, #9333ea);
+}
+
+/* Gradient text effect */
+.gradient-text {
+  background: linear-gradient(135deg, #ec4899, #a855f7, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }

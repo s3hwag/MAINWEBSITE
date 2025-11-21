@@ -37,6 +37,8 @@ class BookingInquiry(BaseModel):
     event_type: str
     event_date: str
     booth_type: str
+    package_type: Optional[str] = None
+    location: Optional[str] = None
     message: Optional[str] = None
     timestamp: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
@@ -47,6 +49,8 @@ class BookingInquiryCreate(BaseModel):
     event_type: str
     event_date: str
     booth_type: str
+    package_type: Optional[str] = None
+    location: Optional[str] = None
     message: Optional[str] = None
 
 class ContactMessage(BaseModel):
@@ -55,19 +59,31 @@ class ContactMessage(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     name: str
     email: EmailStr
+    phone: Optional[str] = None
     message: str
     timestamp: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
 class ContactMessageCreate(BaseModel):
     name: str
     email: EmailStr
+    phone: Optional[str] = None
     message: str
+
+class NewsletterSubscription(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+    
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    email: EmailStr
+    timestamp: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+class NewsletterSubscriptionCreate(BaseModel):
+    email: EmailStr
 
 
 # Routes
 @api_router.get("/")
 async def root():
-    return {"message": "Forever Photobooth Studio API"}
+    return {"message": "Chennai Photobooth Studio API"}
 
 @api_router.post("/bookings", response_model=BookingInquiry)
 async def create_booking(input: BookingInquiryCreate):
@@ -110,6 +126,22 @@ async def get_contacts():
             contact['timestamp'] = datetime.fromisoformat(contact['timestamp'])
     
     return contacts
+
+@api_router.post("/newsletter", response_model=NewsletterSubscription)
+async def subscribe_newsletter(input: NewsletterSubscriptionCreate):
+    # Check if email already exists
+    existing = await db.newsletter.find_one({"email": input.email}, {"_id": 0})
+    if existing:
+        raise HTTPException(status_code=400, detail="Email already subscribed")
+    
+    sub_dict = input.model_dump()
+    sub_obj = NewsletterSubscription(**sub_dict)
+    
+    doc = sub_obj.model_dump()
+    doc['timestamp'] = doc['timestamp'].isoformat()
+    
+    await db.newsletter.insert_one(doc)
+    return sub_obj
 
 
 # Include the router in the main app
