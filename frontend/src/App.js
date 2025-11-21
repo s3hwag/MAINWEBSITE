@@ -363,15 +363,28 @@ function App() {
               </p>
             </div>
 
-            {/* Vanilla Image */}
+            {/* Vanilla Image Slider */}
             <div className="mb-12">
-              <div className="aspect-video rounded-3xl overflow-hidden shadow-2xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1698235301688-6b5b79dac3d5?crop=entropy&cs=srgb&fm=jpg&q=85" 
-                  alt="Vanilla Photobooths"
-                  className="w-full h-full object-cover"
-                />
+              <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+                <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+                  {[
+                    "https://images.unsplash.com/photo-1698235301688-6b5b79dac3d5?crop=entropy&cs=srgb&fm=jpg&q=85",
+                    "https://images.unsplash.com/photo-1627580158782-ecd7b8a16326?crop=entropy&cs=srgb&fm=jpg&q=85",
+                    "https://images.pexels.com/photos/3271951/pexels-photo-3271951.jpeg",
+                    "https://images.unsplash.com/photo-1686853021307-e9e5b01cb85e?crop=entropy&cs=srgb&fm=jpg&q=85",
+                    "https://images.pexels.com/photos/28588977/pexels-photo-28588977.jpeg"
+                  ].map((img, idx) => (
+                    <div key={idx} className="flex-shrink-0 w-full snap-center aspect-video">
+                      <img 
+                        src={img} 
+                        alt={`Vanilla Photobooth ${idx + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
+              <p className="text-center text-gray-600 mt-4 text-sm">← Swipe to see more →</p>
             </div>
 
             {/* Vanilla Ideal For */}
