@@ -216,7 +216,7 @@ async def get_bookings():
     return bookings
 
 @api_router.post("/contact", response_model=ContactMessage)
-async def create_contact(input: ContactMessageCreate):
+async def create_contact(input: ContactMessageCreate, background_tasks: BackgroundTasks):
     contact_dict = input.model_dump()
     contact_obj = ContactMessage(**contact_dict)
     
@@ -224,6 +224,10 @@ async def create_contact(input: ContactMessageCreate):
     doc['timestamp'] = doc['timestamp'].isoformat()
     
     await db.contacts.insert_one(doc)
+    
+    # Send email notification in background
+    background_tasks.add_task(send_contact_email, contact_obj)
+    
     return contact_obj
 
 @api_router.get("/contact", response_model=List[ContactMessage])
