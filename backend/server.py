@@ -83,6 +83,108 @@ class NewsletterSubscriptionCreate(BaseModel):
     email: EmailStr
 
 
+# Email Sending Function
+async def send_booking_email(booking: BookingInquiry):
+    """Send booking notification email"""
+    try:
+        # Email configuration
+        sender_email = "noreply@memorabooth.com"
+        receiver_email = "sehwagvijay@memorabooth.com"
+        
+        # Create message
+        message = MIMEMultipart("alternative")
+        message["Subject"] = f"New Booking Inquiry - {booking.booth_type}"
+        message["From"] = sender_email
+        message["To"] = receiver_email
+        
+        # Create HTML content
+        html_content = f"""
+        <html>
+            <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+                <h2 style="color: #e91e63;">New Booking Inquiry</h2>
+                <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px;">
+                    <h3>Customer Details:</h3>
+                    <p><strong>Name:</strong> {booking.name}</p>
+                    <p><strong>Email:</strong> {booking.email}</p>
+                    <p><strong>Phone:</strong> {booking.phone}</p>
+                    
+                    <h3>Event Details:</h3>
+                    <p><strong>Event Type:</strong> {booking.event_type}</p>
+                    <p><strong>Event Date:</strong> {booking.event_date}</p>
+                    <p><strong>Booth Type:</strong> {booking.booth_type}</p>
+                    {f'<p><strong>Package Type:</strong> {booking.package_type}</p>' if booking.package_type else ''}
+                    {f'<p><strong>Location:</strong> {booking.location}</p>' if booking.location else ''}
+                    
+                    {f'<h3>Additional Message:</h3><p>{booking.message}</p>' if booking.message else ''}
+                    
+                    <p style="margin-top: 20px;"><strong>Inquiry ID:</strong> {booking.id}</p>
+                    <p><strong>Submitted At:</strong> {booking.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}</p>
+                </div>
+            </body>
+        </html>
+        """
+        
+        # Attach HTML content
+        html_part = MIMEText(html_content, "html")
+        message.attach(html_part)
+        
+        # Note: In production, you would use proper SMTP configuration
+        # For now, we'll log the email content
+        logger.info(f"Email notification would be sent for booking {booking.id}")
+        logger.info(f"To: {receiver_email}, Subject: {message['Subject']}")
+        
+        # In production environment, uncomment and configure SMTP:
+        # with smtplib.SMTP('smtp.gmail.com', 587) as server:
+        #     server.starttls()
+        #     server.login(sender_email, os.environ.get('EMAIL_PASSWORD'))
+        #     server.send_message(message)
+        
+    except Exception as e:
+        logger.error(f"Failed to send email notification: {str(e)}")
+
+
+async def send_contact_email(contact: ContactMessage):
+    """Send contact form notification email"""
+    try:
+        sender_email = "noreply@memorabooth.com"
+        receiver_email = "sehwagvijay@memorabooth.com"
+        
+        message = MIMEMultipart("alternative")
+        message["Subject"] = f"New Contact Message from {contact.name}"
+        message["From"] = sender_email
+        message["To"] = receiver_email
+        
+        html_content = f"""
+        <html>
+            <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+                <h2 style="color: #e91e63;">New Contact Message</h2>
+                <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px;">
+                    <p><strong>Name:</strong> {contact.name}</p>
+                    <p><strong>Email:</strong> {contact.email}</p>
+                    {f'<p><strong>Phone:</strong> {contact.phone}</p>' if contact.phone else ''}
+                    
+                    <h3>Message:</h3>
+                    <p style="background-color: white; padding: 15px; border-left: 4px solid #e91e63;">
+                        {contact.message}
+                    </p>
+                    
+                    <p style="margin-top: 20px;"><strong>Message ID:</strong> {contact.id}</p>
+                    <p><strong>Submitted At:</strong> {contact.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}</p>
+                </div>
+            </body>
+        </html>
+        """
+        
+        html_part = MIMEText(html_content, "html")
+        message.attach(html_part)
+        
+        logger.info(f"Email notification would be sent for contact message {contact.id}")
+        logger.info(f"To: {receiver_email}, Subject: {message['Subject']}")
+        
+    except Exception as e:
+        logger.error(f"Failed to send email notification: {str(e)}")
+
+
 # Routes
 @api_router.get("/")
 async def root():
