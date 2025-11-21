@@ -242,8 +242,8 @@ function App() {
                 />
               </div>
               <div className="absolute -bottom-8 -right-8 bg-gradient-to-br from-pink-600 to-purple-600 text-white p-8 rounded-2xl shadow-xl">
-                <p className="font-display text-3xl font-bold">Making Memories</p>
-                <p className="text-lg font-light">Since 2023</p>
+                <p className="font-display text-3xl font-bold">Redefining</p>
+                <p className="text-lg font-light">Event Memories</p>
               </div>
             </div>
           </div>
