@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Allura&family=Inter:wght@300;400;500;600;700&display=swap');
 
+@font-face {
+  font-family: 'Futura';
+  src: local('Futura Medium'), local('Futura-Medium');
+  font-weight: 500;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
