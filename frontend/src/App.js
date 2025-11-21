@@ -345,7 +345,7 @@ function App() {
                     </div>
                   </div>
                   <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 p-6 rounded-xl border-2 border-yellow-300 text-center">
-                    <p className="text-gray-600 text-sm mb-1">Starting at</p>
+                    <p className="text-gray-600 text-sm mb-1">Strips starting at</p>
                     <p className="font-bold text-3xl text-yellow-700">₹249</p>
                   </div>
                 </CardContent>
