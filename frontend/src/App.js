@@ -670,7 +670,7 @@ function App() {
                   </p>
                   <div className="border-t pt-4">
                     <p className="font-bold text-gray-900">Rajesh Kumar</p>
-                    <p className="text-sm text-gray-600">Event Manager, Fortune 500 Company</p>
+                    <p className="text-sm text-gray-600">Event Manager, Management Company</p>
                   </div>
                 </CardContent>
               </Card>
