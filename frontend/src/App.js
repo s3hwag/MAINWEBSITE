@@ -316,10 +316,10 @@ function App() {
                     alt="Butterscotch Photobooth"
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-yellow-900/80 via-yellow-900/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                     <h3 className="font-display text-3xl font-bold mb-2">Butterscotch Photobooth</h3>
-                    <p className="text-yellow-100">Premium moments, perfect lighting</p>
+                    <p className="text-gray-100">Premium moments, perfect lighting</p>
                   </div>
                 </div>
                 <CardContent className="p-8">
