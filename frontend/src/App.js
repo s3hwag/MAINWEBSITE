@@ -760,13 +760,13 @@ function App() {
               </div>
 
               <div className="bg-gradient-to-br from-pink-50 to-purple-50 p-8 rounded-2xl">
-                <h4 className="font-display text-2xl font-bold text-gray-900 mb-4">Follow Us</h4>
+                <h4 className="font-display text-2xl font-bold text-gray-900 mb-4">Connect With Us</h4>
                 <div className="flex gap-4">
                   <a href="https://instagram.com/memoraboothchennai" target="_blank" rel="noopener noreferrer" className="bg-white p-4 rounded-full hover:scale-110 transition-transform shadow-md">
                     <Instagram className="w-6 h-6 text-pink-600" />
                   </a>
-                  <a href="#" className="bg-white p-4 rounded-full hover:scale-110 transition-transform shadow-md">
-                    <Facebook className="w-6 h-6 text-blue-600" />
+                  <a href="mailto:admin@memorabooth.com" className="bg-white p-4 rounded-full hover:scale-110 transition-transform shadow-md">
+                    <Mail className="w-6 h-6 text-purple-600" />
                   </a>
                 </div>
               </div>
