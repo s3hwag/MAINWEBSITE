@@ -273,10 +273,10 @@ function App() {
                     alt="Brownie Photobooth"
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-amber-900/80 via-amber-900/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                     <h3 className="font-display text-3xl font-bold mb-2">Brownie Photobooth</h3>
-                    <p className="text-amber-100">Sweet memories, simple fun</p>
+                    <p className="text-gray-100">Sweet memories, simple fun</p>
                   </div>
                 </div>
                 <CardContent className="p-8">
