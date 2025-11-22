@@ -249,9 +249,14 @@ async def create_contact(input: ContactMessageCreate, background_tasks: Backgrou
     doc = contact_obj.model_dump()
     doc['timestamp'] = doc['timestamp'].isoformat()
     
-    await db.contacts.insert_one(doc)
+    try:
+        await db.contacts.insert_one(doc)
+        logger.info(f"✅ Contact message saved to MongoDB: {contact_obj.id}")
+    except Exception as db_error:
+        logger.error(f"❌ MongoDB Error: {str(db_error)}")
+        logger.warning("⚠️ Contact message not saved to database, but email will still be sent")
     
-    # Send email notification in background
+    # Send email notification in background (even if DB fails)
     background_tasks.add_task(send_contact_email, contact_obj)
     
     return contact_obj
