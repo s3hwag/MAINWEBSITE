@@ -16,6 +16,9 @@ function App() {
   const [activeSection, setActiveSection] = useState('home');
   const [showBookingForm, setShowBookingForm] = useState(false);
   const [selectedBooth, setSelectedBooth] = useState(null);
+  const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
+  const [showTerms, setShowTerms] = useState(false);
+  const [showRefundPolicy, setShowRefundPolicy] = useState(false);
   const [bookingData, setBookingData] = useState({
     name: "",
     email: "",
