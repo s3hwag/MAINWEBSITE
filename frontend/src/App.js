@@ -598,7 +598,8 @@ function App() {
               "https://customer-assets.emergentagent.com/job_forever-photos-4/artifacts/k1gromee_IMG_2554%202.jpg",
               "https://customer-assets.emergentagent.com/job_forever-photos-4/artifacts/zsm8m3vj_IMG_2549%202.jpg",
               "https://customer-assets.emergentagent.com/job_forever-photos-4/artifacts/kl7c5pfb_IMG_2551%202.jpg",
-              "https://customer-assets.emergentagent.com/job_forever-photos-4/artifacts/pq8ci1je_IMG_2552%202.jpg"
+              "https://customer-assets.emergentagent.com/job_forever-photos-4/artifacts/pq8ci1je_IMG_2552%202.jpg",
+              "https://customer-assets.emergentagent.com/job_forever-photos-4/artifacts/jhtzaz8o_IMG_0243.jpg"
             ].map((img, idx) => (
               <div key={idx} className="aspect-square overflow-hidden rounded-2xl group cursor-pointer" data-testid={`gallery-img-${idx}`}>
                 <img 
