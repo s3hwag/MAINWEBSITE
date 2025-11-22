@@ -420,10 +420,6 @@ function App() {
                     </div>
                     <div className="flex items-start gap-2">
                       <Sparkles className="w-5 h-5 text-pink-600 mt-0.5" />
-                      <span className="text-gray-700">Instant 2x6" or 4x6" prints</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <Sparkles className="w-5 h-5 text-pink-600 mt-0.5" />
                       <span className="text-gray-700">On-screen live preview</span>
                     </div>
                     <div className="flex items-start gap-2">
