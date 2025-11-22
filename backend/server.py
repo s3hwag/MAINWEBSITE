@@ -219,9 +219,14 @@ async def create_booking(input: BookingInquiryCreate, background_tasks: Backgrou
     doc = booking_obj.model_dump()
     doc['timestamp'] = doc['timestamp'].isoformat()
     
-    await db.bookings.insert_one(doc)
+    try:
+        await db.bookings.insert_one(doc)
+        logger.info(f"✅ Booking saved to MongoDB: {booking_obj.id}")
+    except Exception as db_error:
+        logger.error(f"❌ MongoDB Error: {str(db_error)}")
+        logger.warning("⚠️ Booking not saved to database, but email will still be sent")
     
-    # Send email notification in background
+    # Send email notification in background (even if DB fails)
     background_tasks.add_task(send_booking_email, booking_obj)
     
     return booking_obj
