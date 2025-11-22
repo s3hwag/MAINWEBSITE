@@ -1009,6 +1009,197 @@ function App() {
           </Card>
         </div>
       )}
+
+      {/* Privacy Policy Modal */}
+      {showPrivacyPolicy && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm" data-testid="privacy-modal">
+          <Card className="w-full max-w-4xl max-h-[90vh] overflow-y-auto">
+            <CardContent className="p-8">
+              <div className="flex justify-between items-center mb-6">
+                <h2 className="font-display text-3xl font-bold text-gray-900">Privacy Policy</h2>
+                <button onClick={() => setShowPrivacyPolicy(false)} className="text-gray-500 hover:text-gray-900 text-3xl leading-none">×</button>
+              </div>
+              
+              <div className="space-y-6 text-gray-700">
+                <div>
+                  <h3 className="font-bold text-xl text-gray-900 mb-3">Complete Security for Users</h3>
+                  <p>At Memora Photobooth, we prioritize your privacy and data security above all else. We are committed to providing a completely secure experience for all our users.</p>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-xl text-gray-900 mb-3">No Data Storage Policy</h3>
+                  <p className="mb-2">We do not store any personal data on our systems. This includes:</p>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Photos taken during your event</li>
+                    <li>Personal information shared during booking</li>
+                    <li>Contact details beyond what's necessary for service delivery</li>
+                    <li>Payment information (processed securely through third-party providers)</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-xl text-gray-900 mb-3">Photo Privacy</h3>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>All photos are printed instantly and given directly to you</li>
+                    <li>No digital copies are retained on our equipment</li>
+                    <li>Photos are not uploaded to any cloud services or online platforms</li>
+                    <li>You have full ownership and control of all images taken</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-xl text-gray-900 mb-3">Information Collection</h3>
+                  <p className="mb-2">We only collect minimal information necessary to provide our services:</p>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Contact information for booking confirmation</li>
+                    <li>Event details for service delivery</li>
+                    <li>Payment information (processed securely and not stored)</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-xl text-gray-900 mb-3">Data Security</h3>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>All equipment is reset after each event</li>
+                    <li>No permanent storage devices retain any customer data</li>
+                    <li>Communication is handled through secure channels</li>
+                    <li>We follow industry best practices for data protection</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-xl text-gray-900 mb-3">Third-Party Services</h3>
+                  <p>We may use third-party payment processors for transactions. These services have their own privacy policies and security measures. We do not share any additional personal information with third parties.</p>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-xl text-gray-900 mb-3">Contact</h3>
+                  <p>If you have any questions about our privacy practices, please contact us at admin@memorabooth.com or +91 7550154640.</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      )}
+
+      {/* Terms and Conditions Modal */}
+      {showTerms && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm" data-testid="terms-modal">
+          <Card className="w-full max-w-4xl max-h-[90vh] overflow-y-auto">
+            <CardContent className="p-8">
+              <div className="flex justify-between items-center mb-6">
+                <h2 className="font-display text-3xl font-bold text-gray-900">Terms and Conditions</h2>
+                <button onClick={() => setShowTerms(false)} className="text-gray-500 hover:text-gray-900 text-3xl leading-none">×</button>
+              </div>
+              
+              <div className="space-y-6 text-gray-700">
+                <div>
+                  <h3 className="font-bold text-xl text-gray-900 mb-3">1. Service Agreement</h3>
+                  <p>By booking Memora Photobooth services, you agree to these terms and conditions. Our photobooth rental service provides high-quality photo experiences for events, parties, and business use.</p>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-xl text-gray-900 mb-3">2. Booking and Payment</h3>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Bookings are confirmed upon receipt of payment</li>
+                    <li>Payment can be made via cash, UPI, or bank transfer</li>
+                    <li>Pricing is as displayed on our website and may vary based on location and event requirements</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-xl text-gray-900 mb-3">3. Client Responsibilities</h3>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Provide adequate space and power supply for photobooth setup</li>
+                    <li>Ensure safe handling of equipment by guests</li>
+                    <li>Notify us of any special requirements or venue restrictions</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-xl text-gray-900 mb-3">4. Liability</h3>
+                  <p>Memora Photobooth is not liable for any damages to personal property or injuries during the event. Clients are responsible for guest behavior around equipment.</p>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-xl text-gray-900 mb-3">5. Equipment</h3>
+                  <p>All equipment remains the property of Memora Photobooth. Any damage to equipment will be charged to the client at replacement cost.</p>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-xl text-gray-900 mb-3">6. Force Majeure</h3>
+                  <p>We are not liable for delays or cancellations due to circumstances beyond our control, including weather, natural disasters, or government restrictions.</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      )}
+
+      {/* Refund Policy Modal */}
+      {showRefundPolicy && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm" data-testid="refund-modal">
+          <Card className="w-full max-w-4xl max-h-[90vh] overflow-y-auto">
+            <CardContent className="p-8">
+              <div className="flex justify-between items-center mb-6">
+                <h2 className="font-display text-3xl font-bold text-gray-900">Refunds & Cancellations</h2>
+                <button onClick={() => setShowRefundPolicy(false)} className="text-gray-500 hover:text-gray-900 text-3xl leading-none">×</button>
+              </div>
+              
+              <div className="space-y-6 text-gray-700">
+                <div>
+                  <h3 className="font-bold text-xl text-gray-900 mb-3">Cancellation Policy</h3>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li><strong>42 hours before event:</strong> Full refund processed the same day</li>
+                    <li><strong>24 hours before event:</strong> 60% refund processed the same day</li>
+                    <li><strong>Less than 24 hours:</strong> No refund</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-xl text-gray-900 mb-3">Refund Process</h3>
+                  <p className="mb-2">Our streamlined refund process ensures quick processing:</p>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Contact us via phone (+91 7550154640) or email (admin@memorabooth.com)</li>
+                    <li>Provide your payment reference and reason</li>
+                    <li>Refund is processed immediately during business hours</li>
+                    <li>Money is returned via the same payment method used for booking</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-xl text-gray-900 mb-3">Service Issues</h3>
+                  <p className="mb-2">If we're unable to provide the service as promised:</p>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Full refund is processed</li>
+                    <li>Immediate processing of refund</li>
+                    <li>Priority booking for future events</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-xl text-gray-900 mb-3">Refund Timeline</h3>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li><strong>UPI/Digital Payments:</strong> Instant to 2 hours</li>
+                    <li><strong>Bank Transfer:</strong> Same day (within business hours)</li>
+                    <li><strong>Cash Payments:</strong> Immediate cash refund</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-xl text-gray-900 mb-3">Contact for Cancellations</h3>
+                  <p className="mb-2">For all cancellation requests:</p>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Phone: +91 7550154640 (fastest response)</li>
+                    <li>Email: admin@memorabooth.com</li>
+                    <li>Business Hours: 9 AM - 7 PM (7 days a week)</li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      )}
     </div>
   );
 }
