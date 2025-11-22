@@ -873,8 +873,13 @@ function App() {
               </ul>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
-            <p>© 2024 Chennai Photobooths. All rights reserved.</p>
+          <div className="border-t border-gray-800 mt-12 pt-8">
+            <div className="flex flex-wrap justify-center gap-6 mb-4">
+              <button onClick={() => setShowPrivacyPolicy(true)} className="text-gray-400 hover:text-white transition-colors">Privacy Policy</button>
+              <button onClick={() => setShowTerms(true)} className="text-gray-400 hover:text-white transition-colors">Terms & Conditions</button>
+              <button onClick={() => setShowRefundPolicy(true)} className="text-gray-400 hover:text-white transition-colors">Refund Policy</button>
+            </div>
+            <p className="text-center text-gray-500">© 2024 Memorabooth. All rights reserved.</p>
           </div>
         </div>
       </footer>
