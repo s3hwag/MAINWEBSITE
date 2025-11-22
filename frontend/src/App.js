@@ -647,21 +647,9 @@ function App() {
             <h3 className="font-display text-3xl font-bold text-gray-900 mb-8 text-center">Our Brand Activation Clients</h3>
             <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-12 shadow-xl">
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center">
-                {[
-                  'TechVista Inc.',
-                  'Zara Fashion',
-                  'Flipkart',
-                  'Swiggy',
-                  'Ola Cabs',
-                  'BMW India',
-                  'Samsung',
-                  'Coca-Cola',
-                  'Amazon',
-                  'Google India'
-                ].map((client, idx) => (
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((idx) => (
                   <div key={idx} className="text-center" data-testid={`client-${idx}`}>
                     <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl p-6 h-24 flex items-center justify-center hover:shadow-lg transition-shadow">
-                      <p className="font-bold text-gray-800 text-sm md:text-base">{client}</p>
                     </div>
                   </div>
                 ))}
