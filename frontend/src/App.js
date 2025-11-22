@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { MapPin, Clock, Camera, Sparkles, Users, Heart, Award, Mail, Phone, Instagram, Facebook } from "lucide-react";
+import { MapPin, Clock, Camera, Sparkles, Users, Heart, Award, Mail, Phone, Instagram } from "lucide-react";
 import axios from "axios";
 import { toast, Toaster } from "sonner";
 
